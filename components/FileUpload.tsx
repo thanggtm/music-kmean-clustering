@@ -95,7 +95,16 @@ export default function FileUpload({ onFile, loading, error, fileName, onReset }
       )}
 
       <div className="rounded-xl bg-zinc-800/50 border border-zinc-700/50 p-4 text-xs text-zinc-400 space-y-1">
-        <p className="font-medium text-zinc-300 text-sm">Expected file format</p>
+        <div className="flex items-center justify-between mb-1">
+          <p className="font-medium text-zinc-300 text-sm">Expected file format</p>
+          <a
+            href="/sample-spotify-data.xlsx"
+            download
+            className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2"
+          >
+            Download sample
+          </a>
+        </div>
         <p>• First row = column headers</p>
         <p>• Required numeric columns: e.g. danceability, energy, tempo, valence…</p>
         <p>• Optional: an <code className="text-emerald-400">id</code> column and a name/title column</p>
