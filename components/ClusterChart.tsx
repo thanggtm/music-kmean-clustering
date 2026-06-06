@@ -11,7 +11,7 @@ interface Props {
   result: KMeansResult;
 }
 
-const CLUSTER_FILL = ["#10b981", "#3b82f6", "#8b5cf6", "#f97316", "#ec4899", "#06b6d4", "#eab308", "#ef4444"];
+const CLUSTER_FILL = ["#ea580c", "#3b82f6", "#8b5cf6", "#10b981", "#ec4899", "#06b6d4", "#eab308", "#ef4444"];
 const CLUSTER_NAMES = CLUSTER_FILL.map((_, i) => `Cluster ${i + 1}`);
 
 interface TooltipProps {
@@ -72,13 +72,13 @@ export default function ClusterChart({ result }: Props) {
         <div className="flex rounded-lg overflow-hidden border border-zinc-700 text-sm">
           <button
             onClick={() => setView("pca")}
-            className={`px-4 py-2 font-medium transition-colors ${view === "pca" ? "bg-emerald-500 text-white" : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"}`}
+            className={`px-4 py-2 font-medium transition-colors ${view === "pca" ? "bg-orange-500 text-white" : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"}`}
           >
             PCA View
           </button>
           <button
             onClick={() => setView("feature")}
-            className={`px-4 py-2 font-medium transition-colors ${view === "feature" ? "bg-emerald-500 text-white" : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"}`}
+            className={`px-4 py-2 font-medium transition-colors ${view === "feature" ? "bg-orange-500 text-white" : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"}`}
           >
             Feature View
           </button>
@@ -89,7 +89,7 @@ export default function ClusterChart({ result }: Props) {
             <select
               value={fx}
               onChange={(e) => setFx(Number(e.target.value))}
-              className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-zinc-300 text-xs focus:outline-none focus:border-emerald-500"
+              className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-zinc-300 text-xs focus:outline-none focus:border-orange-500"
             >
               {result.featureNames.map((f, i) => (
                 <option key={f} value={i}>{f}</option>
@@ -99,7 +99,7 @@ export default function ClusterChart({ result }: Props) {
             <select
               value={fy}
               onChange={(e) => setFy(Number(e.target.value))}
-              className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-zinc-300 text-xs focus:outline-none focus:border-emerald-500"
+              className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-zinc-300 text-xs focus:outline-none focus:border-orange-500"
             >
               {result.featureNames.map((f, i) => (
                 <option key={f} value={i}>{f}</option>

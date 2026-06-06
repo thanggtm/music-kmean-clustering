@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "K-Means Clustering Tool",
+  title: "K-Means Clustering Tool · VGU",
   description: "Interactive K-Means clustering for music and data analysis. Upload your Excel file and visualize clusters instantly.",
 };
 

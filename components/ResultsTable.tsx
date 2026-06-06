@@ -9,7 +9,7 @@ interface Props {
 }
 
 const CLUSTER_COLORS = [
-  "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+  "bg-orange-500/20 text-orange-300 border-orange-500/30",
   "bg-blue-500/20 text-blue-300 border-blue-500/30",
   "bg-violet-500/20 text-violetald-300 border-violet-500/30",
   "bg-orange-500/20 text-orange-300 border-orange-500/30",

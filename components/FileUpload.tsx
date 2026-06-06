@@ -35,9 +35,9 @@ export default function FileUpload({ onFile, loading, error, fileName, onReset }
 
   if (fileName) {
     return (
-      <div className="flex items-center gap-3 p-4 rounded-xl border border-emerald-500/40 bg-emerald-500/10">
-        <FileSpreadsheet className="w-5 h-5 text-emerald-400 shrink-0" />
-        <span className="text-sm text-emerald-300 font-medium truncate flex-1">{fileName}</span>
+      <div className="flex items-center gap-3 p-4 rounded-xl border border-orange-500/40 bg-orange-500/10">
+        <FileSpreadsheet className="w-5 h-5 text-orange-400 shrink-0" />
+        <span className="text-sm text-orange-300 font-medium truncate flex-1">{fileName}</span>
         <button
           onClick={onReset}
           className="text-zinc-400 hover:text-white transition-colors"
@@ -53,7 +53,7 @@ export default function FileUpload({ onFile, loading, error, fileName, onReset }
       <div
         className={`relative border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition-all duration-200
           ${dragging
-            ? "border-emerald-400 bg-emerald-500/10"
+            ? "border-orange-400 bg-orange-500/10"
             : "border-zinc-600 hover:border-zinc-400 hover:bg-zinc-800/50"
           }`}
         onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
@@ -69,8 +69,8 @@ export default function FileUpload({ onFile, loading, error, fileName, onReset }
           onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); }}
         />
         <div className="flex flex-col items-center gap-3">
-          <div className={`p-4 rounded-full transition-colors ${dragging ? "bg-emerald-500/20" : "bg-zinc-700/50"}`}>
-            <Upload className={`w-7 h-7 ${dragging ? "text-emerald-400" : "text-zinc-400"}`} />
+          <div className={`p-4 rounded-full transition-colors ${dragging ? "bg-orange-500/20" : "bg-zinc-700/50"}`}>
+            <Upload className={`w-7 h-7 ${dragging ? "text-orange-400" : "text-zinc-400"}`} />
           </div>
           <div>
             <p className="text-sm font-medium text-zinc-200">
@@ -82,7 +82,7 @@ export default function FileUpload({ onFile, loading, error, fileName, onReset }
         </div>
         {loading && (
           <div className="absolute inset-0 flex items-center justify-center bg-zinc-900/70 rounded-2xl">
-            <div className="w-6 h-6 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin" />
+            <div className="w-6 h-6 border-2 border-orange-400 border-t-transparent rounded-full animate-spin" />
           </div>
         )}
       </div>
@@ -100,14 +100,14 @@ export default function FileUpload({ onFile, loading, error, fileName, onReset }
           <a
             href="/sample-spotify-data.xlsx"
             download
-            className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2"
+            className="text-orange-400 hover:text-orange-300 underline underline-offset-2"
           >
             Download sample
           </a>
         </div>
         <p>• First row = column headers</p>
         <p>• Required numeric columns: e.g. danceability, energy, tempo, valence…</p>
-        <p>• Optional: an <code className="text-emerald-400">id</code> column and a name/title column</p>
+        <p>• Optional: an <code className="text-orange-400">id</code> column and a name/title column</p>
         <p>• Each subsequent row = one data item (song, product, etc.)</p>
       </div>
     </div>

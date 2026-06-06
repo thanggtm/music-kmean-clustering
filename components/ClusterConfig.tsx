@@ -64,7 +64,7 @@ export default function ClusterConfig({
             onClick={() => onKChange(n)}
             className={`w-9 h-9 rounded-full text-sm font-semibold transition-all ${
               n === k
-                ? "bg-emerald-500 text-white scale-110 shadow-lg shadow-emerald-500/30"
+                ? "bg-orange-500 text-white scale-110 shadow-lg shadow-orange-500/30"
                 : "bg-zinc-700 text-zinc-400 hover:bg-zinc-600"
             }`}
           >
@@ -85,7 +85,7 @@ export default function ClusterConfig({
             {selectedFeatures.length}/{featureNames.length} selected
           </span>
           {showFeatures ? (
-            <ToggleRight className="w-5 h-5 text-emerald-400" />
+            <ToggleRight className="w-5 h-5 text-orange-400" />
           ) : (
             <ToggleLeft className="w-5 h-5" />
           )}
@@ -101,7 +101,7 @@ export default function ClusterConfig({
                   onClick={() => toggleFeature(f)}
                   className={`px-3 py-2 rounded-lg text-xs font-medium transition-all text-left ${
                     active
-                      ? "bg-emerald-500/20 border border-emerald-500/50 text-emerald-300"
+                      ? "bg-orange-500/20 border border-orange-500/50 text-orange-300"
                       : "bg-zinc-800 border border-zinc-700 text-zinc-500 hover:border-zinc-500"
                   }`}
                 >
@@ -118,9 +118,9 @@ export default function ClusterConfig({
         onClick={onRun}
         disabled={loading || selectedFeatures.length < 2}
         className="w-full py-3.5 rounded-xl font-semibold text-sm transition-all duration-200
-          bg-emerald-500 hover:bg-emerald-400 text-white
+          bg-orange-500 hover:bg-orange-400 text-white
           disabled:opacity-50 disabled:cursor-not-allowed
-          shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40"
+          shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40"
       >
         {loading ? (
           <span className="flex items-center justify-center gap-2">
